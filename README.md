@@ -11,7 +11,8 @@ best_math_schools = (schools.loc
     ]
     .sort_values("average_math", ascending=False)
 )
-print(best_math_schools); ```
+print(best_math_schools);
+```
 
 Code outcome:
 
