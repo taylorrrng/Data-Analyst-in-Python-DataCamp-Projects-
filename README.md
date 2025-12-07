@@ -128,3 +128,19 @@ Code outcome:
 
 | Decade and Nobel Prize are {2020: 'Literature'} |
 
+**d. The first woman to ever win a Nobel Prize**
+
+```python
+earliest_year = nobel[nobel["female"]]["year"].min()
+first_woman = nobel[(nobel["female"]) & (nobel["year"] == earliest_year)]
+first_woman_name = first_woman["full_name"].iloc[0]
+first_woman_category = first_woman["category"].iloc[0]
+print("First woman's name is", first_woman_name)
+print("Her category is", first_woman_category)
+```
+Code outcome:
+
+```
+First woman's name is Marie Curie, née Sklodowska
+Her category is Physics
+```
