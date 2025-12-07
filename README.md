@@ -92,8 +92,10 @@ print("Top country is", top_country)
 ```
 Code outcome:
 
-| Top gender is Male                         |
-| Top country is United States of America     |
+```
+Top gender is Male
+Top country is United States of America
+```
 
 **b. Decade with the highest ratio**
 
@@ -112,7 +114,9 @@ print("Decade with highest ratio is", max_decade_usa)
 
 Code outcome:
 
-| Decade with highest ratio is 2000  |
+```
+Decade with highest ratio is 2000
+```
 
 **c. Decade and Nobel Prize category had the highest proportion of female winners**
 
@@ -126,7 +130,9 @@ print("Decade and Nobel Prize are", max_female_dict)
 
 Code outcome:
 
-| Decade and Nobel Prize are {2020: 'Literature'} |
+```
+Decade and Nobel Prize are {2020: 'Literature'}
+```
 
 **d. The first woman to ever win a Nobel Prize**
 
@@ -143,4 +149,18 @@ Code outcome:
 ```
 First woman's name is Marie Curie, née Sklodowska
 Her category is Physics
+```
+
+**e. Individuals with more than 1 prize**
+
+```python
+name_counts = nobel["full_name"].value_counts()
+repeat_list = name_counts[name_counts > 1].index.tolist()
+print("Individuals with more than 1 Nobel Prize are", repeat_list)
+```
+
+Code outcome:
+
+```
+Individuals with more than 1 Nobel Prize are ['Comité international de la Croix Rouge (International Committee of the Red Cross)', 'Linus Carl Pauling', 'John Bardeen', 'Frederick Sanger', 'Marie Curie, née Sklodowska', 'Office of the United Nations High Commissioner for Refugees (UNHCR)']
 ```
